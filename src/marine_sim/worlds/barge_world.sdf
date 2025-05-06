@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <world name="barge_world">
+    <!-- Include the sun -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    
+    <!-- Simple blue ocean surface -->
+    <model name="ocean">
+      <static>true</static>
+      <link name="link">
+        <visual name="visual">
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.0 0.3 0.7 1.0</ambient>
+            <diffuse>0.0 0.3 0.7 1.0</diffuse>
+            <specular>1.0 1.0 1.0 0.2</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+  </world>
+</sdf>
